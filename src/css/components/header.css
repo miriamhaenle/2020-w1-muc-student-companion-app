@@ -1,0 +1,49 @@
+.header {
+  background: var(--grey);
+  height: 81px;
+  font-size: 0.8rem;
+  font-variant: small-caps;
+  margin-bottom: 50px;
+  padding: 15px 0 25px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  z-index: 100;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  border-radius: 100% 50%;
+  background: var(--white);
+  width: 75%;
+  height: 100%;
+  left: -37px;
+  top: 76px;
+  z-index: -1;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 89% 50%;
+  width: 60%;
+  height: 95%;
+  background-color: var(--grey);
+  right: -41px;
+  top: 10px;
+  z-index: -1;
+}
+
+.header__headline {
+  text-align: center;
+}
+
+.header__date {
+  color: var(--primary-lighter);
+  font-size: 0.75rem;
+  font-variant: normal;
+  margin: -18px;
+  text-align: center;
+}
