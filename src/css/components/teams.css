@@ -2,6 +2,11 @@
   width: 100vw;
 }
 
+.team h2 {
+  font-size: 0.875rem;
+  margin: 31px;
+}
+
 .team__container {
   margin: 0 auto;
   width: 315px;
