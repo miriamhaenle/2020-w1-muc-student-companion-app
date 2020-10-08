@@ -1,0 +1,22 @@
+{
+  "name": "student-companion-app",
+  "version": "1.0.0",
+  "description": "Example solution for neuefische bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miriamhaenle/2020-w1-muc-student-companion-app.git"
+  },
+  "author": "Coach Hänle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miriamhaenle/2020-w1-muc-student-companion-app/issues"
+  },
+  "homepage": "https://github.com/miriamhaenle/2020-w1-muc-student-companion-app#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
