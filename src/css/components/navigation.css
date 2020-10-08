@@ -1,12 +1,22 @@
 .navigation {
-  display: flex;
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px var(--primary-transparent);
+  margin: 0 auto;
+  width: 89vw;
 }
 
 .navigation__list {
   display: flex;
+  justify-content: space-around;
+  padding: 11px 0;
+  width: 100%;
 }
 
-.navigation__list li {
+.navigation__item {
   list-style: none;
-  padding: 0 5px;
+  filter: invert(0.5);
+}
+
+.navigation__item--active {
+  filter: invert(0);
 }
