@@ -1,0 +1,26 @@
+.team {
+  width: 100vw;
+}
+
+.team__container {
+  margin: 0 auto;
+  width: 315px;
+}
+
+.team__member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primary-light);
+  height: 58px;
+  width: 100%;
+}
+
+.team__member:first-child {
+  border-radius: 6px 6px 0 0;
+}
+
+.team__member:last-child {
+  border-radius: 0 0 6px 6px;
+}
