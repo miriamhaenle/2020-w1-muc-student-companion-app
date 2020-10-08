@@ -1,0 +1,38 @@
+.header {
+  background: var(--grey);
+  height: 70px;
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+  padding: 5px;
+  position: relative;
+  width: 100vw;
+  z-index: 100;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  border-radius: 100% 50%;
+  background: var(--white);
+  width: 60%;
+  height: 87%;
+  left: -26px;
+  top: 56px;
+  z-index: -1;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 89% 50%;
+  width: 60%;
+  height: 95%;
+  background-color: var(--grey);
+  right: -41px;
+  top: 18px;
+  z-index: -1;
+}
+
+.header__headline {
+  text-align: center;
+}
