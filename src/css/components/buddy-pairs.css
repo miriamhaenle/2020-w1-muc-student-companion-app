@@ -1,0 +1,14 @@
+.buddy {
+  border: 1px solid var(--primary-light);
+  height: 58px;
+  width: 315px;
+  position: relative;
+}
+
+.buddy:nth-child(odd)::after {
+  bottom: -1.5rem;
+  content: '+';
+  font-size: 3rem;
+  position: absolute;
+  z-index: 10;
+}
