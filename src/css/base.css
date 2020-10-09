@@ -14,3 +14,7 @@ html {
 footer {
   width: 100vw;
 }
+
+textarea {
+  font-family: 'Open Sans', sans-serif;
+}
