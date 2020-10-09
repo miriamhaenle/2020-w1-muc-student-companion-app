@@ -1,0 +1,29 @@
+.energy__level {
+  display: grid;
+  gap: 10px;
+}
+
+.energy__button {
+  background: var(--secondary);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  height: 48px;
+  width: 315px;
+}
+
+.energy__button--75 {
+  background: var(--secondary-lighter);
+}
+
+.energy__button--50 {
+  background: var(--secondary-light);
+  color: var(--secondary);
+}
+
+.energy__button--25 {
+  background: var(--secondary-pale);
+  color: var(--secondary);
+}
