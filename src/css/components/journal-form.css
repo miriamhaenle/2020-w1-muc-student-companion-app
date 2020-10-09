@@ -1,0 +1,48 @@
+.journal {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.journal h2 {
+  font-size: 0.875rem;
+  grid-column: span 2;
+}
+
+.journal__label {
+  display: flex;
+  font-size: 0.875rem;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.journal__label--motto,
+.journal__label--notes {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.journal__stars {
+  grid-column: span 2;
+}
+
+.journal__rectangles {
+  grid-column: span 2;
+}
+
+.journal__label--motto input,
+.journal__label--notes textarea {
+  border: 1px solid var(--primary-light);
+  border-radius: 4px;
+  resize: none;
+}
+
+.journal__button {
+  border: none;
+  border-radius: 5px;
+  grid-column: span 1;
+  padding: 16px 0;
+  place-self: center;
+  width: 150px;
+}
