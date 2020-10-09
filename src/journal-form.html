@@ -11,55 +11,46 @@
       <h1 class="header__headline">Journal</h1>
     </header>
     <main class="d-flex-col p-30">
-      <button class="journal__button">Rate today</button>
+      <button class="journal__button">
+        <a href="journal-page.html">Rate today</a>
+      </button>
       <section class="max-w-375">
-        <form action="submit" class="journal journal__card">
-          <h2>Yesterday</h2>
+        <form action="submit" class="journal">
+          <h2>Today, 19.10.20</h2>
           <label for="rating" class="journal__label">Rating: </label>
           <div class="journal__stars">
-            <input type="radio" name="rating" value="1" disabled />
-            <input type="radio" name="rating" value="2" disabled />
-            <input type="radio" name="rating" value="3" disabled />
-            <input type="radio" name="rating" value="4" disabled />
-            <input type="radio" name="rating" value="5" disabled />
+            <input type="radio" name="rating" value="1" />
+            <input type="radio" name="rating" value="2" />
+            <input type="radio" name="rating" value="3" />
+            <input type="radio" name="rating" value="4" />
+            <input type="radio" name="rating" value="5" />
           </div>
           <label for="comprehension" class="journal__label">
             Comprehension
           </label>
           <div class="journal__rectangles">
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
-            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
+            <input type="radio" name="comprehension" />
           </div>
           <label for="motto" class="journal__label journal__label--motto"
             >Motto
-            <input
-              type="text"
-              id="motto"
-              name="motto"
-              disabled
-              placeholder="That's the city life"
-            />
+            <input type="text" id="motto" name="motto" />
           </label>
 
           <label for="notes" class="journal__label journal__label--notes">
             Notes
-            <textarea
-              name="notes"
-              id="notes"
-              cols="30"
-              rows="10"
-              placeholder="Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque."
-              disabled
-            ></textarea>
+            <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
           </label>
+          <button class="journal__button">Cancel</button>
+          <button class="journal__button">Save</button>
         </form>
       </section>
     </main>

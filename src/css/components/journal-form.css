@@ -4,6 +4,12 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.journal__card {
+  box-shadow: 0 2px 11px var(--primary-transparent);
+  padding: 20px;
+  width: 315px;
+}
+
 .journal h2 {
   font-size: 0.875rem;
   grid-column: span 2;
