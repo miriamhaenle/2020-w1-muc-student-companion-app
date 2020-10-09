@@ -11,11 +11,14 @@
 }
 
 .journal h2 {
+  color: var(--primary);
   font-size: 0.875rem;
+  font-variant: small-caps;
   grid-column: span 2;
 }
 
 .journal__label {
+  color: var(--primary-lighter);
   display: flex;
   font-size: 0.875rem;
   grid-column: span 2;
@@ -41,14 +44,49 @@
 .journal__label--notes textarea {
   border: 1px solid var(--primary-light);
   border-radius: 4px;
+  font-size: 1rem;
+  padding: 10px;
   resize: none;
+}
+
+.journal__label--motto input[disabled],
+.journal__label--notes textarea[disabled] {
+  background: var(--white);
+  border: none;
+  color: #193251;
+  padding: 10px 0;
+}
+
+.journal__label--motto input[disabled]  {
+  font-weight: 800;
 }
 
 .journal__button {
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
   grid-column: span 1;
   padding: 16px 0;
   place-self: center;
   width: 150px;
+}
+
+.journal__button a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.journal__button--orange {
+  background: var(--secondary);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.journal__button--white {
+  background: var(--white);
+  color: var(--primary);
+  font-weight: 600;
+}
+.journal__button--white a {
+  color: var(--primary);
 }

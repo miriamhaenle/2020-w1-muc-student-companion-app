@@ -11,7 +11,9 @@
       <h1 class="header__headline">Journal</h1>
     </header>
     <main class="d-flex-col p-30">
-      <button class="journal__button">Rate today</button>
+      <button class="journal__button journal__button--orange mb-30">
+        <a href="journal-form.html">Rate today</a>
+      </button>
       <section class="max-w-375">
         <form action="submit" class="journal journal__card">
           <h2>Yesterday</h2>
@@ -45,20 +47,15 @@
               id="motto"
               name="motto"
               disabled
-              placeholder="That's the city life"
+              value="'That's the city life'"
             />
           </label>
 
           <label for="notes" class="journal__label journal__label--notes">
             Notes
-            <textarea
-              name="notes"
-              id="notes"
-              cols="30"
-              rows="10"
-              placeholder="Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque."
-              disabled
-            ></textarea>
+            <textarea name="notes" id="notes" cols="30" rows="5" disabled>
+Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque.</textarea
+            >
           </label>
         </form>
       </section>
