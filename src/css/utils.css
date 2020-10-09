@@ -25,3 +25,7 @@
 .p-30 {
   padding: 30px;
 }
+
+.max-w-375 {
+  max-width: 375px;
+}
