@@ -25,71 +25,52 @@
   grid-column: span 2;
 }
 
-/* .chart__bar:nth-child(2),
-.chart__bar:nth-child(5),
-.chart__bar:nth-child(8),
-.chart__bar:nth-child(11),
-.chart__bar:nth-child(14) {
+.chart__bar:nth-child(3n + 2) {
   background: var(--primary);
-  color: white;
 }
- */
-/* .chart__bar:first-child,
-.chart__bar:nth-child(4),
-.chart__bar:nth-child(7),
-.chart__bar:nth-child(10),
-.chart__bar:nth-child(13) {
+
+.chart__bar:nth-child(3n + 3) {
   background: var(--secondary);
-} */
+}
 
 .chart__bar--1 {
   grid-row: span 100;
-  background: var(--primary);
 }
 
 .chart__bar--2 {
   grid-row: span 50;
-  background: var(--secondary);
 }
 
 .chart__bar--3 {
   grid-row: span 100;
-  background: var(--primary);
 }
 
 .chart__bar--4 {
   grid-row: span 100;
-  background: var(--secondary);
 }
 
 .chart__bar--5 {
   grid-row: span 100;
-  background: var(--primary);
 }
 
 .chart__bar--6 {
   grid-row: span 100;
-  background: var(--secondary);
 }
 
 .chart__bar--7 {
   grid-row: span 100;
-  background: var(--primary);
 }
 
 .chart__bar--8 {
   grid-row: span 100;
-  background: var(--secondary);
 }
 
 .chart__bar--9 {
   grid-row: span 100;
-  background: var(--primary);
 }
 
 .chart__bar--10 {
   grid-row: span 100;
-  background: var(--secondary);
 }
 
 .chart__container,
