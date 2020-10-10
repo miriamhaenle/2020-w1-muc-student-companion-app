@@ -1,8 +1,9 @@
 .chart {
   display: grid;
-  grid-template-columns: repeat(22, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(100, 1fr);
   height: 30vh;
+  width: 315px;
 }
 
 .chart__legend-Y {
@@ -26,57 +27,101 @@
 }
 
 .chart__bar:nth-child(3n + 2) {
-  background: var(--primary);
-}
-
-.chart__bar:nth-child(3n + 3) {
   background: var(--secondary);
 }
 
+.chart__bar:nth-child(3n + 3) {
+  background: var(--primary);
+}
+
 .chart__bar--1 {
+  grid-column-start: 4;
   grid-row: span 100;
 }
 
 .chart__bar--2 {
-  grid-row: span 50;
+  grid-column-start: 5;
+  grid-row: 51 / span 50;
 }
 
 .chart__bar--3 {
-  grid-row: span 100;
+  grid-column-start: 7;
+  grid-row: 21 / span 80;
 }
 
 .chart__bar--4 {
-  grid-row: span 100;
+  grid-column-start: 8;
+  grid-row: 31 / span 70;
 }
 
 .chart__bar--5 {
-  grid-row: span 100;
+  grid-column-start: 10;
+  grid-row: 51 / span 50;
 }
 
 .chart__bar--6 {
-  grid-row: span 100;
+  grid-column-start: 11;
+  grid-row: 21 / span 80;
 }
 
 .chart__bar--7 {
-  grid-row: span 100;
+  grid-column-start: 13;
+  grid-row: 41 / span 60;
 }
 
 .chart__bar--8 {
-  grid-row: span 100;
+  grid-column-start: 14;
+  grid-row: 61 / span 40;
 }
 
 .chart__bar--9 {
-  grid-row: span 100;
+  grid-column-start: 16;
+  grid-row: 71 / span 30;
 }
 
 .chart__bar--10 {
-  grid-row: span 100;
+  grid-column-start: 17;
+  grid-row: 91 / span 10;
 }
 
 .chart__container,
 .energy__level {
   display: grid;
   gap: 10px;
+}
+
+.chart__legend--time {
+  color: var(--primary-lighter);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  grid-row: 101;
+  grid-column: 4 / -1;
+  padding: 5px 0;
+}
+
+.chart__legend--X {
+  display: flex;
+  font-size: 0.75rem;
+  grid-row: 102;
+  grid-column: 11 / -1;
+}
+
+.chart__legend--X span {
+  padding: 3px 6px;
+}
+
+.chart__legend--X span:nth-child(1) {
+  background: var(--primary);
+  border-radius: 3px;
+  color: var(--white);
+  margin-right: 10px;
+}
+
+.chart__legend--X span:nth-child(2) {
+  background: var(--secondary-pale);
+  color: var(--secondary);
+  border-radius: 3px;
 }
 
 .energy__button {
