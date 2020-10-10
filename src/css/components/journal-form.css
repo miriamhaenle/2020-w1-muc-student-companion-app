@@ -26,27 +26,43 @@
 }
 
 .journal__stars {
+  display: flex;
+  flex-direction: row-reverse;
   grid-column: span 2;
+  justify-content: flex-end;
 }
 
 .journal__stars input {
   display: none;
 }
-.journal__stars label {
-  font-size: 1.5rem;
+
+.journal__star--inactive {
+  opacity: 0.2;
 }
 
-.journal__stars label:hover,
-.journal__stars label:active {
-  color: var(--secondary);
+.journal__star--inactive:hover,
+.journal__star--inactive:hover ~ label {
+  opacity: 1;
 }
 
 .journal__rectangles {
+  display: flex;
+  flex-direction: row-reverse;
   grid-column: span 2;
+  justify-content: space-around;
 }
 
 .journal__rectangles input {
   display: none;
+}
+
+.journal__rectangle--inactive {
+  opacity: 0.2;
+}
+
+.journal__rectangle--inactive:hover,
+.journal__rectangle--inactive:hover ~ label {
+  opacity: 1;
 }
 
 .journal__label--motto,
