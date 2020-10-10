@@ -36,7 +36,12 @@
   display: none;
 }
 
-.journal__star--inactive {
+input[disabled] {
+  border: 2px solid red;
+}
+
+.journal__star--inactive,
+.journal__stars input:disabled:hover {
   opacity: 0.2;
 }
 
