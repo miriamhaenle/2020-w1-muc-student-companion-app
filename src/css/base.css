@@ -18,3 +18,9 @@ footer {
 textarea {
   font-family: 'Open Sans', sans-serif;
 }
+
+main::after {
+  display: inline-block;
+  content: '';
+  height: 80px;
+}

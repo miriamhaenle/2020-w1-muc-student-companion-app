@@ -33,3 +33,8 @@
 .max-w-375 {
   max-width: 375px;
 }
+
+.fixed-bottom {
+  bottom: 0;
+  position: fixed;
+}
