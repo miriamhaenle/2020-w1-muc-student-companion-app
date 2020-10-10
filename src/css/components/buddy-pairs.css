@@ -12,3 +12,9 @@
   position: absolute;
   z-index: 10;
 }
+
+.buddy__headline {
+  align-self: start;
+  font-size: 0.875rem;
+  margin: 31px;
+}

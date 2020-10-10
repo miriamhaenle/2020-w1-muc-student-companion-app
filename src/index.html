@@ -11,50 +11,65 @@
       <h1 class="header__headline">Dashboard</h1>
     </header>
     <main>
-      <section>
-        <div>Sudanka Bakalowits</div>
-        <div>Yasaman Foroutan</div>
+      <section class="d-flex-col mb-30">
+        <h2 class="buddy__headline">Your code buddy for today</h2>
+        <div class="buddy d-flex-col br-t-6">Sudanka Bakalowits</div>
+        <div class="buddy d-flex-col br-b-6">Yasaman Foroutan</div>
       </section>
 
-      <section>
-        <div>Sudanka Bakalowits</div>
-        <div>Yasaman Foroutan</div>
-        <div>Chioke Okonkwo</div>
-        <div>Maria José Botín</div>
-        <div>Tikhon Yaroslavsky</div>
+      <section class="team mb-30">
+        <h2>Your current team</h2>
+        <div class="team__container d-flex-col">
+          <div class="team__member">Sudanka Bakalowits</div>
+          <div class="team__member">Yasaman Foroutan</div>
+          <div class="team__member">Chioke Okonkwo</div>
+          <div class="team__member">Maria José Botín</div>
+          <div class="team__member">Tikhon Yaroslavsky</div>
+        </div>
       </section>
 
-      <section>
+      <section class="max-w-375 d-flex-col">
         <h2>Yesterday's journal</h2>
-        <form action="">
-          <label for="rating"
-            >Rating:
-            <input type="checkbox" name="rating" />
-            <input type="checkbox" name="rating" />
-            <input type="checkbox" name="rating" />
-            <input type="checkbox" name="rating" />
-            <input type="checkbox" name="rating" />
+        <form action="submit" class="journal journal__card">
+          <label for="rating" class="journal__label"> Rating: </label>
+          <div class="journal__stars">
+            <input type="radio" name="rating" value="1" disabled />
+            <input type="radio" name="rating" value="2" disabled />
+            <input type="radio" name="rating" value="3" disabled />
+            <input type="radio" name="rating" value="4" disabled />
+            <input type="radio" name="rating" value="5" disabled />
+          </div>
+          <label for="comprehension" class="journal__label">
+            Comprehension:
           </label>
-          <label for="comprehension">
-            Comprehension
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
-            <input type="checkbox" name="comprehension" />
+          <div class="journal__rectangles">
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+            <input type="radio" name="comprehension" disabled />
+          </div>
+          <label for="motto" class="journal__label journal__label--motto"
+            >Motto:
+            <input
+              type="text"
+              id="motto"
+              name="motto"
+              disabled
+              value="'That's the city life'"
+            />
           </label>
-          <label for=""
-            >Motto
-            <input type="text" disabled />
-          </label>
-          Notes
-          <label for="notes">
-            <textarea name="notes" cols="30" rows="10" disabled></textarea>
+
+          <label for="notes" class="journal__label journal__label--notes">
+            Notes:
+            <textarea name="notes" id="notes" cols="30" rows="5" disabled>
+Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque.</textarea
+            >
           </label>
         </form>
       </section>
