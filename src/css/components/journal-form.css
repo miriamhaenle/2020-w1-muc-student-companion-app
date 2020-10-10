@@ -36,17 +36,12 @@
   display: none;
 }
 
-input[disabled] {
-  border: 2px solid red;
-}
-
-.journal__star--inactive,
-.journal__stars input:disabled:hover {
+.journal__star,
+.journal__stars input:disabled {
   opacity: 0.2;
 }
 
-.journal__star--inactive:hover,
-.journal__star--inactive:hover ~ label {
+.journal__star--selected {
   opacity: 1;
 }
 
@@ -61,12 +56,12 @@ input[disabled] {
   display: none;
 }
 
-.journal__rectangle--inactive {
+.journal__rectangle {
   opacity: 0.2;
 }
 
-.journal__rectangle--inactive:hover,
-.journal__rectangle--inactive:hover ~ label {
+.journal__rectangle:hover,
+.journal__rectangle:hover ~ label {
   opacity: 1;
 }
 
