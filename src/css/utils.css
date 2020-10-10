@@ -38,3 +38,7 @@
   bottom: 0;
   position: fixed;
 }
+
+.z-100 {
+  z-index: 100;
+}
