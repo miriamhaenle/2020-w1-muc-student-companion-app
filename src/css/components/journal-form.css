@@ -37,11 +37,14 @@
 }
 
 .journal__star,
-.journal__stars input:disabled {
+.journal__stars input:disabled:not(:checked) ~ label {
   opacity: 0.2;
 }
 
-.journal__star--selected {
+.journal__star:hover,
+.journal__star:hover ~ label,
+.journal__star:active,
+.journal__stars input:disabled:checked ~ label {
   opacity: 1;
 }
 
@@ -56,12 +59,15 @@
   display: none;
 }
 
-.journal__rectangle {
+.journal__rectangle,
+.journal__rectangles input:disabled:not(:checked) ~ label {
   opacity: 0.2;
 }
 
 .journal__rectangle:hover,
-.journal__rectangle:hover ~ label {
+.journal__rectangle:hover ~ label,
+.journal__rectangle:active,
+.journal__rectangles input:disabled:checked ~ label {
   opacity: 1;
 }
 
