@@ -17,12 +17,58 @@
   grid-column: span 2;
 }
 
-.journal__label {
+.journal span {
   color: var(--primary-lighter);
   display: flex;
   font-size: 0.875rem;
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.journal__stars {
+  display: flex;
+  flex-direction: row-reverse;
+  grid-column: span 2;
+  justify-content: flex-end;
+}
+
+.journal__stars input {
+  display: none;
+}
+
+.journal__star,
+.journal__stars input:disabled:not(:checked) ~ label {
+  opacity: 0.2;
+}
+
+.journal__star:hover,
+.journal__star:hover ~ label,
+.journal__star:active,
+.journal__stars input:disabled:checked ~ label {
+  opacity: 1;
+}
+
+.journal__rectangles {
+  display: flex;
+  flex-direction: row-reverse;
+  grid-column: span 2;
+  justify-content: space-around;
+}
+
+.journal__rectangles input {
+  display: none;
+}
+
+.journal__rectangle,
+.journal__rectangles input:disabled:not(:checked) ~ label {
+  opacity: 0.2;
+}
+
+.journal__rectangle:hover,
+.journal__rectangle:hover ~ label,
+.journal__rectangle:active,
+.journal__rectangles input:disabled:checked ~ label {
+  opacity: 1;
 }
 
 .journal__label--motto,
@@ -31,15 +77,6 @@
   display: flex;
   flex-direction: column;
 }
-
-.journal__stars {
-  grid-column: span 2;
-}
-
-.journal__rectangles {
-  grid-column: span 2;
-}
-
 .journal__label--motto input,
 .journal__label--notes textarea {
   border: 1px solid var(--primary-light);

@@ -135,6 +135,10 @@
   width: 315px;
 }
 
+.energy__button:hover {
+  box-shadow: 0 3px 11px var(--primary-transparent);
+}
+
 .energy__button--75 {
   background: var(--secondary-lighter);
 }
