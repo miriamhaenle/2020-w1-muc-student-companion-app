@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Companion App</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/index.js" defer></script>
   </head>
   <body>
     <!-- Dashboard -->
@@ -152,7 +153,7 @@
 
     <!-- Team -->
 
-    <section class="hidden" data-js="team">
+    <section class="hidden" data-js="teams">
       <header class="header">
         <h1 class="header__headline">Teams</h1>
         <p class="header__date">for exercise 1</p>
@@ -434,19 +435,27 @@
     <footer class="fixed-bottom">
       <nav class="navigation">
         <ul class="navigation__list">
-          <li class="navigation__item navigation__item--active">
+          <li
+            class="navigation__item navigation__item--active"
+            data-js="dashboard-nav-item"
+          >
             <img src="assets/DashboardIcon.svg" alt="" />
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item" data-js="buddies-nav-item">
             <img src="assets/BuddyIcon.svg" alt="" />
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item" data-js="teams-nav-item">
             <img src="assets/TeamIcon.svg" alt="" />
           </li>
           <li class="navigation__item">
-            <img class="img-24" src="assets/EnergyIcon@2x.png" alt="" />
+            <img
+              class="img-24"
+              src="assets/EnergyIcon@2x.png"
+              alt=""
+              data-js="energy-nav-item"
+            />
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item" data-js="journal-nav-item">
             <img src="assets/JournalIcon.svg" alt="" />
           </li>
         </ul>
