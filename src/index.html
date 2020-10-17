@@ -9,416 +9,427 @@
   <body>
     <!-- Dashboard -->
 
-    <header class="header">
-      <h1 class="header__headline">Dashboard</h1>
-    </header>
-    <main class="d-flex-col">
-      <h2 class="buddy__headline">Your code buddy for today</h2>
-      <section class="d-flex-col mb-30">
-        <div class="buddy d-flex-col br-t-6">Sudanka Bakalowits</div>
-        <div class="buddy d-flex-col br-b-6">Yasaman Foroutan</div>
-      </section>
+    <section data-js="dashboard">
+      <header class="header">
+        <h1 class="header__headline">Dashboard</h1>
+      </header>
+      <main class="d-flex-col">
+        <h2 class="buddy__headline">Your code buddy for today</h2>
+        <section class="d-flex-col mb-30">
+          <div class="buddy d-flex-col br-t-6">Sudanka Bakalowits</div>
+          <div class="buddy d-flex-col br-b-6">Yasaman Foroutan</div>
+        </section>
 
-      <section class="team mb-30">
-        <h2 class="team__headline">Your current team</h2>
-        <div class="team__container d-flex-col">
-          <div class="team__member">Sudanka Bakalowits</div>
-          <div class="team__member">Yasaman Foroutan</div>
-          <div class="team__member">Chioke Okonkwo</div>
-          <div class="team__member">Maria José Botín</div>
-          <div class="team__member">Tikhon Yaroslavsky</div>
-        </div>
-      </section>
-
-      <section class="max-w-375 d-flex-col">
-        <h2>Yesterday's journal</h2>
-        <form action="submit" class="journal journal__card">
-          <h2>Yesterday</h2>
-          <span>Rating:</span>
-          <div class="journal__stars">
-            <input type="radio" name="rating" id="star5" disabled />
-            <label for="star5"><img src="assets/Star@2x.svg" alt="" /></label>
-            <input type="radio" name="rating" id="star4" disabled />
-            <label for="star4"><img src="assets/Star@2x.svg" alt="" /></label>
-            <input type="radio" name="rating" id="star3" disabled checked />
-            <label for="star3"><img src="assets/Star@2x.svg" alt="" /></label>
-            <input type="radio" name="rating" id="star2" disabled />
-            <label for="star2"><img src="assets/Star@2x.svg" alt="" /></label>
-            <input type="radio" name="rating" id="star1" disabled />
-            <label for="star1"><img src="assets/Star@2x.svg" alt="" /></label>
+        <section class="team mb-30">
+          <h2 class="team__headline">Your current team</h2>
+          <div class="team__container d-flex-col">
+            <div class="team__member">Sudanka Bakalowits</div>
+            <div class="team__member">Yasaman Foroutan</div>
+            <div class="team__member">Chioke Okonkwo</div>
+            <div class="team__member">Maria José Botín</div>
+            <div class="team__member">Tikhon Yaroslavsky</div>
           </div>
-          <label for="comprehension" class="journal__label">
-            Comprehension:
-          </label>
-          <div class="journal__rectangles">
-            <input type="radio" name="comprehension" id="sq-10" disabled />
-            <label for="sq-10" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-9" disabled />
-            <label for="sq-9" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-8" disabled />
-            <label for="sq-8" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input
-              type="radio"
-              name="comprehension"
-              id="sq-7"
-              disabled
-              checked
-            />
-            <label for="sq-7" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-6" disabled />
-            <label for="sq-6"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-5" disabled />
-            <label for="sq-5"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-4" disabled />
-            <label for="sq-4"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-3" disabled />
-            <label for="sq-3"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-2" disabled />
-            <label for="sq-2"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-1" disabled />
-            <label for="sq-1"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-          </div>
-          <label for="motto" class="journal__label journal__label--motto"
-            >Motto:
-            <input
-              type="text"
-              id="motto"
-              name="motto"
-              disabled
-              value="'That's the city life'"
-            />
-          </label>
+        </section>
 
-          <label for="notes" class="journal__label journal__label--notes">
-            Notes:
-            <textarea name="notes" id="notes" cols="30" rows="5" disabled>
-Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque.</textarea
-            >
-          </label>
-        </form>
-      </section>
-    </main>
+        <section class="max-w-375 d-flex-col">
+          <h2>Yesterday's journal</h2>
+          <form action="submit" class="journal journal__card">
+            <h2>Yesterday</h2>
+            <span>Rating:</span>
+            <div class="journal__stars">
+              <input type="radio" name="rating" id="star5" disabled />
+              <label for="star5"><img src="assets/Star@2x.svg" alt="" /></label>
+              <input type="radio" name="rating" id="star4" disabled />
+              <label for="star4"><img src="assets/Star@2x.svg" alt="" /></label>
+              <input type="radio" name="rating" id="star3" disabled checked />
+              <label for="star3"><img src="assets/Star@2x.svg" alt="" /></label>
+              <input type="radio" name="rating" id="star2" disabled />
+              <label for="star2"><img src="assets/Star@2x.svg" alt="" /></label>
+              <input type="radio" name="rating" id="star1" disabled />
+              <label for="star1"><img src="assets/Star@2x.svg" alt="" /></label>
+            </div>
+            <label for="comprehension" class="journal__label">
+              Comprehension:
+            </label>
+            <div class="journal__rectangles">
+              <input type="radio" name="comprehension" id="sq-10" disabled />
+              <label for="sq-10" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-9" disabled />
+              <label for="sq-9" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-8" disabled />
+              <label for="sq-8" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input
+                type="radio"
+                name="comprehension"
+                id="sq-7"
+                disabled
+                checked
+              />
+              <label for="sq-7" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-6" disabled />
+              <label for="sq-6"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-5" disabled />
+              <label for="sq-5"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-4" disabled />
+              <label for="sq-4"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-3" disabled />
+              <label for="sq-3"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-2" disabled />
+              <label for="sq-2"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-1" disabled />
+              <label for="sq-1"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+            </div>
+            <label for="motto" class="journal__label journal__label--motto"
+              >Motto:
+              <input
+                type="text"
+                id="motto"
+                name="motto"
+                disabled
+                value="'That's the city life'"
+              />
+            </label>
+
+            <label for="notes" class="journal__label journal__label--notes">
+              Notes:
+              <textarea name="notes" id="notes" cols="30" rows="5" disabled>
+  Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque.</textarea
+              >
+            </label>
+          </form>
+        </section>
+      </main>
+    </section>
 
     <!-- Code Buddies -->
-    <header class="header mb-50">
-      <h1 class="header__headline">Code Buddies</h1>
-      <p class="header__date">on Monday - 12.10.20</p>
-    </header>
-    <main>
-      <section class="d-flex-col mb-30">
-        <div class="buddy d-flex-col br-t-6">Sudanka Bakalowits</div>
-        <div class="buddy d-flex-col br-b-6">Yasaman Foroutan</div>
-      </section>
+    <section class="hidden" data-js="code-buddies">
+      <header class="header mb-50">
+        <h1 class="header__headline">Code Buddies</h1>
+        <p class="header__date">on Monday - 12.10.20</p>
+      </header>
+      <main>
+        <section class="d-flex-col mb-30">
+          <div class="buddy d-flex-col br-t-6">Sudanka Bakalowits</div>
+          <div class="buddy d-flex-col br-b-6">Yasaman Foroutan</div>
+        </section>
 
-      <section class="d-flex-col mb-30">
-        <div class="buddy d-flex-col br-t-6">Angela Longoria</div>
-        <div class="buddy d-flex-col br-b-6">Maria Trofimova</div>
-      </section>
+        <section class="d-flex-col mb-30">
+          <div class="buddy d-flex-col br-t-6">Angela Longoria</div>
+          <div class="buddy d-flex-col br-b-6">Maria Trofimova</div>
+        </section>
 
-      <section class="d-flex-col mb-30">
-        <div class="buddy d-flex-col br-t-6">Benedita Tavares</div>
-        <div class="buddy d-flex-col br-b-6">Elise Beverley</div>
-      </section>
+        <section class="d-flex-col mb-30">
+          <div class="buddy d-flex-col br-t-6">Benedita Tavares</div>
+          <div class="buddy d-flex-col br-b-6">Elise Beverley</div>
+        </section>
 
-      <section class="d-flex-col">
-        <div class="buddy d-flex-col br-t-6">Evelyn Allen</div>
-        <div class="buddy d-flex-col br-b-6">Rafeeda El Nouri</div>
-      </section>
-    </main>
+        <section class="d-flex-col">
+          <div class="buddy d-flex-col br-t-6">Evelyn Allen</div>
+          <div class="buddy d-flex-col br-b-6">Rafeeda El Nouri</div>
+        </section>
+      </main>
+    </section>
 
     <!-- Team -->
 
-    <header class="header">
-      <h1 class="header__headline">Teams</h1>
-      <p class="header__date">for exercise 1</p>
-    </header>
-    <main>
-      <section class="team mb-30">
-        <h2 class="team__headline">Team 1</h2>
-        <div class="team__container d-flex-col">
-          <div class="team__member">Sudanka Bakalowits</div>
-          <div class="team__member">Yasaman Foroutan</div>
-          <div class="team__member">Chioke Okonkwo</div>
-          <div class="team__member">Maria José Botín</div>
-          <div class="team__member">Tikhon Yaroslavsky</div>
-        </div>
-      </section>
+    <section class="hidden" data-js="team">
+      <header class="header">
+        <h1 class="header__headline">Teams</h1>
+        <p class="header__date">for exercise 1</p>
+      </header>
+      <main>
+        <section class="team mb-30">
+          <h2 class="team__headline">Team 1</h2>
+          <div class="team__container d-flex-col">
+            <div class="team__member">Sudanka Bakalowits</div>
+            <div class="team__member">Yasaman Foroutan</div>
+            <div class="team__member">Chioke Okonkwo</div>
+            <div class="team__member">Maria José Botín</div>
+            <div class="team__member">Tikhon Yaroslavsky</div>
+          </div>
+        </section>
 
-      <section class="team mb-30">
-        <h2 class="team__headline">Team 2</h2>
-        <div class="team__container d-flex-col">
-          <div class="team__member">Sudanka Bakalowits</div>
-          <div class="team__member">Yasaman Foroutan</div>
-          <div class="team__member">Chioke Okonkwo</div>
-          <div class="team__member">Maria José Botín</div>
-          <div class="team__member">Tikhon Yaroslavsky</div>
-        </div>
-      </section>
-    </main>
+        <section class="team mb-30">
+          <h2 class="team__headline">Team 2</h2>
+          <div class="team__container d-flex-col">
+            <div class="team__member">Sudanka Bakalowits</div>
+            <div class="team__member">Yasaman Foroutan</div>
+            <div class="team__member">Chioke Okonkwo</div>
+            <div class="team__member">Maria José Botín</div>
+            <div class="team__member">Tikhon Yaroslavsky</div>
+          </div>
+        </section>
+      </main>
+    </section>
 
     <!-- Energy -->
 
-    <header class="header">
-      <h1 class="header__headline">Energy</h1>
-    </header>
-    <main class="d-flex-col">
-      <section class="chart__container">
-        <p>Energy level throughout the day</p>
-        <div class="chart">
-          <div class="chart__legend-Y">
-            <span>100</span>
-            <span>75</span>
-            <span>50</span>
-            <span>25</span>
-            <span>0</span>
+    <section class="hidden" data-js="energy">
+      <header class="header">
+        <h1 class="header__headline">Energy</h1>
+      </header>
+      <main class="d-flex-col">
+        <section class="chart__container">
+          <p>Energy level throughout the day</p>
+          <div class="chart">
+            <div class="chart__legend-Y">
+              <span>100</span>
+              <span>75</span>
+              <span>50</span>
+              <span>25</span>
+              <span>0</span>
+            </div>
+            <div class="chart__bar chart__bar--1"></div>
+            <div class="chart__bar chart__bar--2"></div>
+            <div class="chart__bar chart__bar--empty"></div>
+            <div class="chart__bar chart__bar--3"></div>
+            <div class="chart__bar chart__bar--4"></div>
+            <div class="chart__bar chart__bar--empty"></div>
+            <div class="chart__bar chart__bar--5"></div>
+            <div class="chart__bar chart__bar--6"></div>
+            <div class="chart__bar chart__bar--empty"></div>
+            <div class="chart__bar chart__bar--7"></div>
+            <div class="chart__bar chart__bar--8"></div>
+            <div class="chart__bar chart__bar--empty"></div>
+            <div class="chart__bar chart__bar--9"></div>
+            <div class="chart__bar chart__bar--10"></div>
+            <div class="chart__legend--time">
+              <span>10:00</span>
+              <span>15:30</span>
+              <span>16:15</span>
+              <span>18:25</span>
+              <span>19:00</span>
+            </div>
+            <div class="chart__legend--X">
+              <span>Other students</span>
+              <span>You</span>
+            </div>
           </div>
-          <div class="chart__bar chart__bar--1"></div>
-          <div class="chart__bar chart__bar--2"></div>
-          <div class="chart__bar chart__bar--empty"></div>
-          <div class="chart__bar chart__bar--3"></div>
-          <div class="chart__bar chart__bar--4"></div>
-          <div class="chart__bar chart__bar--empty"></div>
-          <div class="chart__bar chart__bar--5"></div>
-          <div class="chart__bar chart__bar--6"></div>
-          <div class="chart__bar chart__bar--empty"></div>
-          <div class="chart__bar chart__bar--7"></div>
-          <div class="chart__bar chart__bar--8"></div>
-          <div class="chart__bar chart__bar--empty"></div>
-          <div class="chart__bar chart__bar--9"></div>
-          <div class="chart__bar chart__bar--10"></div>
-          <div class="chart__legend--time">
-            <span>10:00</span>
-            <span>15:30</span>
-            <span>16:15</span>
-            <span>18:25</span>
-            <span>19:00</span>
-          </div>
-          <div class="chart__legend--X">
-            <span>Other students</span>
-            <span>You</span>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="energy__level">
-        <p>Rate your energy level</p>
-        <button class="energy__button energy__button--100">100%</button>
-        <button class="energy__button energy__button--75">75%</button>
-        <button class="energy__button energy__button--50">50%</button>
-        <button class="energy__button energy__button--25">25%</button>
-      </section>
-    </main>
+        <section class="energy__level">
+          <p>Rate your energy level</p>
+          <button class="energy__button energy__button--100">100%</button>
+          <button class="energy__button energy__button--75">75%</button>
+          <button class="energy__button energy__button--50">50%</button>
+          <button class="energy__button energy__button--25">25%</button>
+        </section>
+      </main>
+    </section>
 
     <!-- Journal -->
+    <section class="hidden" data-js="journal">
+      <header class="header">
+        <h1 class="header__headline">Journal</h1>
+      </header>
+      <main class="d-flex-col p-30">
+        <button class="journal__button journal__button--orange mb-30">
+          <a href="journal-form.html">Rate today ★</a>
+        </button>
+        <section class="max-w-375">
+          <form action="submit" class="journal journal__card">
+            <h2>Yesterday</h2>
+            <span>Rating:</span>
+            <div class="journal__stars">
+              <input type="radio" name="rating" id="star5" disabled />
+              <label for="star5"><img src="assets/Star@2x.svg" alt="" /></label>
+              <input type="radio" name="rating" id="star4" disabled />
+              <label for="star4"><img src="assets/Star@2x.svg" alt="" /></label>
+              <input type="radio" name="rating" id="star3" disabled checked />
+              <label for="star3"><img src="assets/Star@2x.svg" alt="" /></label>
+              <input type="radio" name="rating" id="star2" disabled />
+              <label for="star2"><img src="assets/Star@2x.svg" alt="" /></label>
+              <input type="radio" name="rating" id="star1" disabled />
+              <label for="star1"><img src="assets/Star@2x.svg" alt="" /></label>
+            </div>
+            <label for="comprehension" class="journal__label">
+              Comprehension:
+            </label>
+            <div class="journal__rectangles">
+              <input type="radio" name="comprehension" id="sq-10" disabled />
+              <label for="sq-10" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-9" disabled />
+              <label for="sq-9" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-8" disabled />
+              <label for="sq-8" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input
+                type="radio"
+                name="comprehension"
+                id="sq-7"
+                disabled
+                checked
+              />
+              <label for="sq-7" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-6" disabled />
+              <label for="sq-6"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-5" disabled />
+              <label for="sq-5"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-4" disabled />
+              <label for="sq-4"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-3" disabled />
+              <label for="sq-3"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-2" disabled />
+              <label for="sq-2"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-1" disabled />
+              <label for="sq-1"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+            </div>
+            <label for="motto" class="journal__label journal__label--motto"
+              >Motto:
+              <input
+                type="text"
+                id="motto"
+                name="motto"
+                disabled
+                value="'That's the city life'"
+              />
+            </label>
 
-    <header class="header">
-      <h1 class="header__headline">Journal</h1>
-    </header>
-    <main class="d-flex-col p-30">
-      <button class="journal__button journal__button--orange mb-30">
-        <a href="journal-form.html">Rate today ★</a>
-      </button>
-      <section class="max-w-375">
-        <form action="submit" class="journal journal__card">
-          <h2>Yesterday</h2>
-          <span>Rating:</span>
-          <div class="journal__stars">
-            <input type="radio" name="rating" id="star5" disabled />
-            <label for="star5"><img src="assets/Star@2x.svg" alt="" /></label>
-            <input type="radio" name="rating" id="star4" disabled />
-            <label for="star4"><img src="assets/Star@2x.svg" alt="" /></label>
-            <input type="radio" name="rating" id="star3" disabled checked />
-            <label for="star3"><img src="assets/Star@2x.svg" alt="" /></label>
-            <input type="radio" name="rating" id="star2" disabled />
-            <label for="star2"><img src="assets/Star@2x.svg" alt="" /></label>
-            <input type="radio" name="rating" id="star1" disabled />
-            <label for="star1"><img src="assets/Star@2x.svg" alt="" /></label>
-          </div>
-          <label for="comprehension" class="journal__label">
-            Comprehension:
-          </label>
-          <div class="journal__rectangles">
-            <input type="radio" name="comprehension" id="sq-10" disabled />
-            <label for="sq-10" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-9" disabled />
-            <label for="sq-9" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-8" disabled />
-            <label for="sq-8" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input
-              type="radio"
-              name="comprehension"
-              id="sq-7"
-              disabled
-              checked
-            />
-            <label for="sq-7" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-6" disabled />
-            <label for="sq-6"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-5" disabled />
-            <label for="sq-5"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-4" disabled />
-            <label for="sq-4"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-3" disabled />
-            <label for="sq-3"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-2" disabled />
-            <label for="sq-2"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-1" disabled />
-            <label for="sq-1"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-          </div>
-          <label for="motto" class="journal__label journal__label--motto"
-            >Motto:
-            <input
-              type="text"
-              id="motto"
-              name="motto"
-              disabled
-              value="'That's the city life'"
-            />
-          </label>
-
-          <label for="notes" class="journal__label journal__label--notes">
-            Notes:
-            <textarea name="notes" id="notes" cols="30" rows="5" disabled>
-Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque.</textarea
-            >
-          </label>
-        </form>
-      </section>
-    </main>
+            <label for="notes" class="journal__label journal__label--notes">
+              Notes:
+              <textarea name="notes" id="notes" cols="30" rows="5" disabled>
+  Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque.</textarea
+              >
+            </label>
+          </form>
+        </section>
+      </main>
+    </section>
 
     <!-- Journal Form -->
 
-    <header class="header">
-      <h1 class="header__headline">Journal</h1>
-    </header>
-    <main class="d-flex-col p-30">
-      <section class="max-w-375">
-        <form action="submit" class="journal">
-          <h2>Today, 19.10.20</h2>
-          <span>Rating:</span>
-          <div class="journal__stars">
-            <input type="radio" name="rating" id="star5" />
-            <label class="journal__star" for="star5"
-              ><img src="assets/Star@2x.svg" alt=""
-            /></label>
-            <input type="radio" name="rating" id="star4" />
-            <label class="journal__star" for="star4"
-              ><img src="assets/Star@2x.svg" alt=""
-            /></label>
-            <input type="radio" name="rating" id="star3" />
-            <label class="journal__star" for="star3"
-              ><img src="assets/Star@2x.svg" alt=""
-            /></label>
-            <input type="radio" name="rating" id="star2" />
-            <label class="journal__star" for="star2"
-              ><img src="assets/Star@2x.svg" alt=""
-            /></label>
-            <input type="radio" name="rating" id="star1" />
-            <label class="journal__star" for="star1"
-              ><img src="assets/Star@2x.svg" alt=""
-            /></label>
-          </div>
-          <span> Comprehension: </span>
-          <div class="journal__rectangles">
-            <input type="radio" name="comprehension" id="sq-10" />
-            <label for="sq-10" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-9" />
-            <label for="sq-9" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-8" />
-            <label for="sq-8" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-7" />
-            <label for="sq-7" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-6" />
-            <label for="sq-6" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-5" />
-            <label for="sq-5" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-4" />
-            <label for="sq-4" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-3" />
-            <label for="sq-3" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-2" />
-            <label for="sq-2" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-            <input type="radio" name="comprehension" id="sq-1" />
-            <label for="sq-1" class="journal__rectangle"
-              ><img src="assets/Rectangle@2x.svg" alt="square"
-            /></label>
-          </div>
-          <label for="motto" class="journal__label journal__label--motto"
-            >Motto:
-            <input type="text" id="motto" name="motto" />
-          </label>
+    <section class="hidden" data-js="journal-form">
+      <header class="header">
+        <h1 class="header__headline">Journal</h1>
+      </header>
+      <main class="d-flex-col p-30">
+        <section class="max-w-375">
+          <form action="submit" class="journal">
+            <h2>Today, 19.10.20</h2>
+            <span>Rating:</span>
+            <div class="journal__stars">
+              <input type="radio" name="rating" id="star5" />
+              <label class="journal__star" for="star5"
+                ><img src="assets/Star@2x.svg" alt=""
+              /></label>
+              <input type="radio" name="rating" id="star4" />
+              <label class="journal__star" for="star4"
+                ><img src="assets/Star@2x.svg" alt=""
+              /></label>
+              <input type="radio" name="rating" id="star3" />
+              <label class="journal__star" for="star3"
+                ><img src="assets/Star@2x.svg" alt=""
+              /></label>
+              <input type="radio" name="rating" id="star2" />
+              <label class="journal__star" for="star2"
+                ><img src="assets/Star@2x.svg" alt=""
+              /></label>
+              <input type="radio" name="rating" id="star1" />
+              <label class="journal__star" for="star1"
+                ><img src="assets/Star@2x.svg" alt=""
+              /></label>
+            </div>
+            <span> Comprehension: </span>
+            <div class="journal__rectangles">
+              <input type="radio" name="comprehension" id="sq-10" />
+              <label for="sq-10" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-9" />
+              <label for="sq-9" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-8" />
+              <label for="sq-8" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-7" />
+              <label for="sq-7" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-6" />
+              <label for="sq-6" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-5" />
+              <label for="sq-5" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-4" />
+              <label for="sq-4" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-3" />
+              <label for="sq-3" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-2" />
+              <label for="sq-2" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+              <input type="radio" name="comprehension" id="sq-1" />
+              <label for="sq-1" class="journal__rectangle"
+                ><img src="assets/Rectangle@2x.svg" alt="square"
+              /></label>
+            </div>
+            <label for="motto" class="journal__label journal__label--motto"
+              >Motto:
+              <input type="text" id="motto" name="motto" />
+            </label>
 
-          <label for="notes" class="journal__label journal__label--notes">
-            Notes:
-            <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
-          </label>
-          <button class="journal__button journal__button--white">
-            <a href="journal-page.html">Cancel</a>
-          </button>
-          <button class="journal__button journal__button--orange">
-            Save ✓
-          </button>
-        </form>
-      </section>
-    </main>
+            <label for="notes" class="journal__label journal__label--notes">
+              Notes:
+              <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+            </label>
+            <button class="journal__button journal__button--white">
+              <a href="journal-page.html">Cancel</a>
+            </button>
+            <button class="journal__button journal__button--orange">
+              Save ✓
+            </button>
+          </form>
+        </section>
+      </main>
+    </section>
 
     <footer class="fixed-bottom">
       <nav class="navigation">
