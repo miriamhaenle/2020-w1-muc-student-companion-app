@@ -19,6 +19,12 @@ export default function Navigation() {
     teamsPage.classList.add('hidden');
     energyPage.classList.add('hidden');
     journalPage.classList.add('hidden');
+
+    dashboardNavItem.classList.add('navigation__item--active');
+    buddiesNavItem.classList.remove('navigation__item--active');
+    teamsNavItem.classList.remove('navigation__item--active');
+    energyNavItem.classList.remove('navigation__item--active');
+    journalNavItem.classList.remove('navigation__item--active');
   });
 
   buddiesNavItem.addEventListener('click', () => {
@@ -27,6 +33,12 @@ export default function Navigation() {
     teamsPage.classList.add('hidden');
     energyPage.classList.add('hidden');
     journalPage.classList.add('hidden');
+
+    dashboardNavItem.classList.remove('navigation__item--active');
+    buddiesNavItem.classList.add('navigation__item--active');
+    teamsNavItem.classList.remove('navigation__item--active');
+    energyNavItem.classList.remove('navigation__item--active');
+    journalNavItem.classList.remove('navigation__item--active');
   });
 
   teamsNavItem.addEventListener('click', () => {
@@ -35,6 +47,12 @@ export default function Navigation() {
     teamsPage.classList.remove('hidden');
     energyPage.classList.add('hidden');
     journalPage.classList.add('hidden');
+
+    dashboardNavItem.classList.remove('navigation__item--active');
+    buddiesNavItem.classList.remove('navigation__item--active');
+    teamsNavItem.classList.add('navigation__item--active');
+    energyNavItem.classList.remove('navigation__item--active');
+    journalNavItem.classList.remove('navigation__item--active');
   });
 
   energyNavItem.addEventListener('click', () => {
@@ -43,6 +61,12 @@ export default function Navigation() {
     teamsPage.classList.add('hidden');
     energyPage.classList.remove('hidden');
     journalPage.classList.add('hidden');
+
+    dashboardNavItem.classList.remove('navigation__item--active');
+    buddiesNavItem.classList.remove('navigation__item--active');
+    teamsNavItem.classList.remove('navigation__item--active');
+    energyNavItem.classList.add('navigation__item--active');
+    journalNavItem.classList.remove('navigation__item--active');
   });
 
   journalNavItem.addEventListener('click', () => {
@@ -51,5 +75,11 @@ export default function Navigation() {
     teamsPage.classList.add('hidden');
     energyPage.classList.add('hidden');
     journalPage.classList.remove('hidden');
+
+    dashboardNavItem.classList.remove('navigation__item--active');
+    buddiesNavItem.classList.remove('navigation__item--active');
+    teamsNavItem.classList.remove('navigation__item--active');
+    energyNavItem.classList.remove('navigation__item--active');
+    journalNavItem.classList.add('navigation__item--active');
   });
 }
