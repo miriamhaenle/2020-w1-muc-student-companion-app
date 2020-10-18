@@ -1,3 +1,5 @@
+import { setClass, removeClass } from './services/classToggles'
+
 export default function Navigation() {
   const dashboardPage = document.querySelector('[data-js="dashboard"]')
   const buddiesPage = document.querySelector('[data-js="code-buddies"]')
@@ -20,11 +22,11 @@ export default function Navigation() {
     hidePage(energyPage)
     hidePage(journalPage)
 
-    dashboardNavItem.classList.add('navigation__item--active')
-    buddiesNavItem.classList.remove('navigation__item--active')
-    teamsNavItem.classList.remove('navigation__item--active')
-    energyNavItem.classList.remove('navigation__item--active')
-    journalNavItem.classList.remove('navigation__item--active')
+    setClass(dashboardNavItem, 'navigation__item--active')
+    removeClass(buddiesNavItem, 'navigation__item--active')
+    removeClass(teamsNavItem, 'navigation__item--active')
+    removeClass(energyNavItem, 'navigation__item--active')
+    removeClass(journalNavItem, 'navigation__item--active')
   })
 
   buddiesNavItem.addEventListener('click', () => {
@@ -34,11 +36,11 @@ export default function Navigation() {
     hidePage(energyPage)
     hidePage(journalPage)
 
-    dashboardNavItem.classList.remove('navigation__item--active')
-    buddiesNavItem.classList.add('navigation__item--active')
-    teamsNavItem.classList.remove('navigation__item--active')
-    energyNavItem.classList.remove('navigation__item--active')
-    journalNavItem.classList.remove('navigation__item--active')
+    removeClass(dashboardNavItem, 'navigation__item--active')
+    setClass(buddiesNavItem, 'navigation__item--active')
+    removeClass(teamsNavItem, 'navigation__item--active')
+    removeClass(energyNavItem, 'navigation__item--active')
+    removeClass(journalNavItem, 'navigation__item--active')
   })
 
   teamsNavItem.addEventListener('click', () => {
@@ -48,11 +50,11 @@ export default function Navigation() {
     hidePage(energyPage)
     hidePage(journalPage)
 
-    dashboardNavItem.classList.remove('navigation__item--active')
-    buddiesNavItem.classList.remove('navigation__item--active')
-    teamsNavItem.classList.add('navigation__item--active')
-    energyNavItem.classList.remove('navigation__item--active')
-    journalNavItem.classList.remove('navigation__item--active')
+    removeClass(dashboardNavItem, 'navigation__item--active')
+    removeClass(buddiesNavItem, 'navigation__item--active')
+    setClass(teamsNavItem, 'navigation__item--active')
+    removeClass(energyNavItem, 'navigation__item--active')
+    removeClass(journalNavItem, 'navigation__item--active')
   })
 
   energyNavItem.addEventListener('click', () => {
@@ -62,11 +64,11 @@ export default function Navigation() {
     showPage(energyPage)
     hidePage(journalPage)
 
-    dashboardNavItem.classList.remove('navigation__item--active')
-    buddiesNavItem.classList.remove('navigation__item--active')
-    teamsNavItem.classList.remove('navigation__item--active')
-    energyNavItem.classList.add('navigation__item--active')
-    journalNavItem.classList.remove('navigation__item--active')
+    removeClass(dashboardNavItem, 'navigation__item--active')
+    removeClass(buddiesNavItem, 'navigation__item--active')
+    removeClass(teamsNavItem, 'navigation__item--active')
+    setClass(energyNavItem, 'navigation__item--active')
+    removeClass(journalNavItem, 'navigation__item--active')
   })
 
   journalNavItem.addEventListener('click', () => {
@@ -76,18 +78,18 @@ export default function Navigation() {
     hidePage(energyPage)
     showPage(journalPage)
 
-    dashboardNavItem.classList.remove('navigation__item--active')
-    buddiesNavItem.classList.remove('navigation__item--active')
-    teamsNavItem.classList.remove('navigation__item--active')
-    energyNavItem.classList.remove('navigation__item--active')
-    journalNavItem.classList.add('navigation__item--active')
+    removeClass(dashboardNavItem, 'navigation__item--active')
+    removeClass(buddiesNavItem, 'navigation__item--active')
+    removeClass(teamsNavItem, 'navigation__item--active')
+    removeClass(energyNavItem, 'navigation__item--active')
+    setClass(journalNavItem, 'navigation__item--active')
   })
 }
 
 function hidePage(page, classIdentifier = 'hidden') {
-  page.classList.add(classIdentifier)
+  setClass(page, classIdentifier)
 }
 
 function showPage(page, classIdentifier = 'hidden') {
-  page.classList.remove('hidden')
+  removeClass(page, classIdentifier)
 }
