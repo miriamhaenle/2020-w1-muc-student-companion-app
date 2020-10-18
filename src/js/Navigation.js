@@ -7,16 +7,18 @@ import {
 
 export default function Navigation() {
   const dashboardPage = getElement('[data-js="dashboard-page"]')
-  const buddiesPage = getElement('[data-js="code-buddies-page"]')
+  const buddiesPage = getElement('[data-js="buddies-page"]')
   const teamsPage = getElement('[data-js="teams-page"]')
   const energyPage = getElement('[data-js="energy-page"]')
   const journalPage = getElement('[data-js="journal-page"]')
 
-  const dashboardNavItem = getElement('[data-js="dashboard-nav-item"]')
-  const buddiesNavItem = getElement('[data-js="buddies-nav-item"]')
-  const teamsNavItem = getElement('[data-js="teams-nav-item"]')
-  const energyNavItem = getElement('[data-js="energy-nav-item"]')
-  const journalNavItem = getElement('[data-js="journal-nav-item"]')
+  const pagesMap = {
+    dashboard: dashboardPage,
+    buddies: buddiesPage,
+    teams: teamsPage,
+    energy: energyPage,
+    journal: journalPage,
+  }
 
   const navItems = getAllElements('.navigation__item')
   const pages = getAllElements('[data-js*="page"]')
@@ -24,30 +26,13 @@ export default function Navigation() {
   navItems.forEach(registerEventListener)
 
   function registerEventListener(navItem) {
-    navItem.addEventListener('click', handleNavigation)
+    navItem.addEventListener('click', () => handleNavigation(navItem, pagesMap))
   }
 
-  function handleNavigation(event) {
-    console.log(event.target)
-    updateNavigationBar(navItems, event.target || event.target.parentNode)
+  function handleNavigation(navItem, pagesMap) {
+    setActiveNavLink(navItems, navItem)
     hideAllPages(pages)
-    showSelectedPage(event.target.parentNode)
-  }
-
-  function showSelectedPage(clickedNavItem) {
-    if (clickedNavItem.dataset.js.includes('dashboard')) {
-      removeClass(dashboardPage, 'hidden')
-    } else if (clickedNavItem.dataset.js.includes('buddies')) {
-      removeClass(buddiesPage, 'hidden')
-    } else if (clickedNavItem.dataset.js.includes('teams')) {
-      removeClass(teamsPage, 'hidden')
-    } else if (clickedNavItem.dataset.js.includes('energy')) {
-      removeClass(energyPage, 'hidden')
-    } else if (clickedNavItem.dataset.js.includes('journal')) {
-      removeClass(journalPage, 'hidden')
-    } else {
-      return
-    }
+    showSelectedPage(navItem, pagesMap)
   }
 }
 
@@ -55,17 +40,24 @@ function hidePage(page, classIdentifier = 'hidden') {
   setClass(page, classIdentifier)
 }
 
-function showPage(page, classIdentifier = 'hidden') {
-  removeClass(page, classIdentifier)
-}
-function updateNavigationBar(navItems, clickedNavItem) {
-  resetNavigation(navItems, 'navigation__item--active')
-  setClass(clickedNavItem, 'navigation__item--active')
-}
-function resetNavigation(elements, classIdentifier) {
-  elements.forEach((element) => removeClass(element, classIdentifier))
+function setActiveNavLink(navItems, clickedNavItem) {
+  const activeNavItemClass = 'navigation__item--active'
+  removeClass([...navItems], activeNavItemClass)
+  setClass(clickedNavItem, activeNavItemClass)
 }
 
 function hideAllPages(pages) {
   pages.forEach((page) => hidePage(page))
+}
+
+function getPageIdentfierFromDataset(dataset) {
+  return dataset.split('-')[0]
+}
+
+function showSelectedPage(clickedNavItem, pagesMap) {
+  const pagesIdentifier = getPageIdentfierFromDataset(clickedNavItem.dataset.js)
+  const activePage = pagesMap[pagesIdentifier]
+  if (activePage) {
+    removeClass(activePage, 'hidden')
+  }
 }

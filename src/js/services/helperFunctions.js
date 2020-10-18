@@ -3,7 +3,12 @@ export function setClass(element, classIdentifier) {
 }
 
 export function removeClass(element, classIdentifier) {
-  element.classList.remove(classIdentifier)
+  const remove = (el) => el.classList.remove(classIdentifier)
+  if (Array.isArray(element)) {
+    element.forEach((element) => remove(element))
+  } else {
+    remove(element)
+  }
 }
 
 export function getElement(selector) {
