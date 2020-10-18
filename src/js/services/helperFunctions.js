@@ -5,3 +5,7 @@ export function setClass(element, classIdentifier) {
 export function removeClass(element, classIdentifier) {
   element.classList.remove(classIdentifier)
 }
+
+export function getElement(selector) {
+  return document.querySelector(selector)
+}

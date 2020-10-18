@@ -1,19 +1,17 @@
-import { setClass, removeClass } from './services/classToggles'
+import { setClass, removeClass, getElement } from './services/helperFunctions'
 
 export default function Navigation() {
-  const dashboardPage = document.querySelector('[data-js="dashboard"]')
-  const buddiesPage = document.querySelector('[data-js="code-buddies"]')
-  const teamsPage = document.querySelector('[data-js="teams"]')
-  const energyPage = document.querySelector('[data-js="energy"]')
-  const journalPage = document.querySelector('[data-js="journal"]')
+  const dashboardPage = getElement('[data-js="dashboard"]')
+  const buddiesPage = getElement('[data-js="code-buddies"]')
+  const teamsPage = getElement('[data-js="teams"]')
+  const energyPage = getElement('[data-js="energy"]')
+  const journalPage = getElement('[data-js="journal"]')
 
-  const dashboardNavItem = document.querySelector(
-    '[data-js="dashboard-nav-item"]'
-  )
-  const buddiesNavItem = document.querySelector('[data-js="buddies-nav-item"]')
-  const teamsNavItem = document.querySelector('[data-js="teams-nav-item"]')
-  const energyNavItem = document.querySelector('[data-js="energy-nav-item"]')
-  const journalNavItem = document.querySelector('[data-js="journal-nav-item"]')
+  const dashboardNavItem = getElement('[data-js="dashboard-nav-item"]')
+  const buddiesNavItem = getElement('[data-js="buddies-nav-item"]')
+  const teamsNavItem = getElement('[data-js="teams-nav-item"]')
+  const energyNavItem = getElement('[data-js="energy-nav-item"]')
+  const journalNavItem = getElement('[data-js="journal-nav-item"]')
 
   dashboardNavItem.addEventListener('click', () => {
     showPage(dashboardPage)
