@@ -23,9 +23,11 @@ export default function Navigation() {
   const navItems = getAllElements('.navigation__item')
   const pages = getAllElements('[data-js*="page"]')
 
-  navItems.forEach(registerEventListener)
+  ;(function initNavigation() {
+    navItems.forEach(registerNavigationHandler)
+  })()
 
-  function registerEventListener(navItem) {
+  function registerNavigationHandler(navItem) {
     navItem.addEventListener('click', () => handleNavigation(navItem, pagesMap))
   }
 
