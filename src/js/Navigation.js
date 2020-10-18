@@ -1,11 +1,16 @@
-import { setClass, removeClass, getElement } from './services/helperFunctions'
+import {
+  setClass,
+  removeClass,
+  getElement,
+  getAllElements,
+} from './services/helperFunctions'
 
 export default function Navigation() {
-  const dashboardPage = getElement('[data-js="dashboard"]')
-  const buddiesPage = getElement('[data-js="code-buddies"]')
-  const teamsPage = getElement('[data-js="teams"]')
-  const energyPage = getElement('[data-js="energy"]')
-  const journalPage = getElement('[data-js="journal"]')
+  const dashboardPage = getElement('[data-js="dashboard-page"]')
+  const buddiesPage = getElement('[data-js="code-buddies-page"]')
+  const teamsPage = getElement('[data-js="teams-page"]')
+  const energyPage = getElement('[data-js="energy-page"]')
+  const journalPage = getElement('[data-js="journal-page"]')
 
   const dashboardNavItem = getElement('[data-js="dashboard-nav-item"]')
   const buddiesNavItem = getElement('[data-js="buddies-nav-item"]')
@@ -13,75 +18,37 @@ export default function Navigation() {
   const energyNavItem = getElement('[data-js="energy-nav-item"]')
   const journalNavItem = getElement('[data-js="journal-nav-item"]')
 
-  dashboardNavItem.addEventListener('click', () => {
-    showPage(dashboardPage)
-    hidePage(buddiesPage)
-    hidePage(teamsPage)
-    hidePage(energyPage)
-    hidePage(journalPage)
+  const navItems = getAllElements('.navigation__item')
+  const pages = getAllElements('[data-js*="page"]')
 
-    setClass(dashboardNavItem, 'navigation__item--active')
-    removeClass(buddiesNavItem, 'navigation__item--active')
-    removeClass(teamsNavItem, 'navigation__item--active')
-    removeClass(energyNavItem, 'navigation__item--active')
-    removeClass(journalNavItem, 'navigation__item--active')
-  })
+  navItems.forEach(registerEventListener)
 
-  buddiesNavItem.addEventListener('click', () => {
-    hidePage(dashboardPage)
-    showPage(buddiesPage)
-    hidePage(teamsPage)
-    hidePage(energyPage)
-    hidePage(journalPage)
+  function registerEventListener(navItem) {
+    navItem.addEventListener('click', handleNavigation)
+  }
 
-    removeClass(dashboardNavItem, 'navigation__item--active')
-    setClass(buddiesNavItem, 'navigation__item--active')
-    removeClass(teamsNavItem, 'navigation__item--active')
-    removeClass(energyNavItem, 'navigation__item--active')
-    removeClass(journalNavItem, 'navigation__item--active')
-  })
+  function handleNavigation(event) {
+    console.log(event.target)
+    updateNavigationBar(navItems, event.target || event.target.parentNode)
+    hideAllPages(pages)
+    showSelectedPage(event.target.parentNode)
+  }
 
-  teamsNavItem.addEventListener('click', () => {
-    hidePage(dashboardPage)
-    hidePage(buddiesPage)
-    showPage(teamsPage)
-    hidePage(energyPage)
-    hidePage(journalPage)
-
-    removeClass(dashboardNavItem, 'navigation__item--active')
-    removeClass(buddiesNavItem, 'navigation__item--active')
-    setClass(teamsNavItem, 'navigation__item--active')
-    removeClass(energyNavItem, 'navigation__item--active')
-    removeClass(journalNavItem, 'navigation__item--active')
-  })
-
-  energyNavItem.addEventListener('click', () => {
-    hidePage(dashboardPage)
-    hidePage(buddiesPage)
-    hidePage(teamsPage)
-    showPage(energyPage)
-    hidePage(journalPage)
-
-    removeClass(dashboardNavItem, 'navigation__item--active')
-    removeClass(buddiesNavItem, 'navigation__item--active')
-    removeClass(teamsNavItem, 'navigation__item--active')
-    setClass(energyNavItem, 'navigation__item--active')
-    removeClass(journalNavItem, 'navigation__item--active')
-  })
-
-  journalNavItem.addEventListener('click', () => {
-    hidePage(dashboardPage)
-    hidePage(buddiesPage)
-    hidePage(teamsPage)
-    hidePage(energyPage)
-    showPage(journalPage)
-
-    removeClass(dashboardNavItem, 'navigation__item--active')
-    removeClass(buddiesNavItem, 'navigation__item--active')
-    removeClass(teamsNavItem, 'navigation__item--active')
-    removeClass(energyNavItem, 'navigation__item--active')
-    setClass(journalNavItem, 'navigation__item--active')
-  })
+  function showSelectedPage(clickedNavItem) {
+    if (clickedNavItem.dataset.js.includes('dashboard')) {
+      removeClass(dashboardPage, 'hidden')
+    } else if (clickedNavItem.dataset.js.includes('buddies')) {
+      removeClass(buddiesPage, 'hidden')
+    } else if (clickedNavItem.dataset.js.includes('teams')) {
+      removeClass(teamsPage, 'hidden')
+    } else if (clickedNavItem.dataset.js.includes('energy')) {
+      removeClass(energyPage, 'hidden')
+    } else if (clickedNavItem.dataset.js.includes('journal')) {
+      removeClass(journalPage, 'hidden')
+    } else {
+      return
+    }
+  }
 }
 
 function hidePage(page, classIdentifier = 'hidden') {
@@ -90,4 +57,15 @@ function hidePage(page, classIdentifier = 'hidden') {
 
 function showPage(page, classIdentifier = 'hidden') {
   removeClass(page, classIdentifier)
+}
+function updateNavigationBar(navItems, clickedNavItem) {
+  resetNavigation(navItems, 'navigation__item--active')
+  setClass(clickedNavItem, 'navigation__item--active')
+}
+function resetNavigation(elements, classIdentifier) {
+  elements.forEach((element) => removeClass(element, classIdentifier))
+}
+
+function hideAllPages(pages) {
+  pages.forEach((page) => hidePage(page))
 }
