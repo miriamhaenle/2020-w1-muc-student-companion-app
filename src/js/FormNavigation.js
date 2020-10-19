@@ -1,26 +1,25 @@
+import { getElement, setClass, removeClass } from './services/helperFunctions'
+
 export default function FormNavigation() {
-  const rateTodayButton = document.querySelector(
-    '[data-js="rate-today-button"]'
-  );
+  const rateTodayButton = getElement('[data-js="rate-today-button"]')
+  const cancelButton = getElement('[data-js="cancel-button"]')
+  const saveButton = getElement('[data-js="save-button"]')
 
-  const cancelButton = document.querySelector('[data-js="cancel-button"]');
-  const saveButton = document.querySelector('[data-js="save-button"]');
-
-  const journalPage = document.querySelector('[data-js="journal"]');
-  const journalForm = document.querySelector('[data-js="journal-form"]');
+  const journalPage = getElement('[data-js="journal-page"]')
+  const journalForm = getElement('[data-js="journal-form"]')
 
   rateTodayButton.addEventListener('click', () => {
-    journalPage.classList.add('hidden');
-    journalForm.classList.remove('hidden');
-  });
+    setClass(journalPage, 'hidden')
+    removeClass(journalForm, 'hidden')
+  })
 
   saveButton.addEventListener('click', (event) => {
-    event.preventDefault();
-  });
+    event.preventDefault()
+  })
 
   cancelButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    journalPage.classList.remove('hidden');
-    journalForm.classList.add('hidden');
-  });
+    event.preventDefault()
+    setClass(journalForm, 'hidden')
+    removeClass(journalPage, 'hidden')
+  })
 }
