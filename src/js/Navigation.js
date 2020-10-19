@@ -1,27 +1,17 @@
 import {
   setClass,
   removeClass,
-  getElement,
   getAllElements,
 } from './services/helperFunctions'
 
 export default function Navigation() {
-  const dashboardPage = getElement('[data-js="dashboard-page"]')
-  const buddiesPage = getElement('[data-js="buddies-page"]')
-  const teamsPage = getElement('[data-js="teams-page"]')
-  const energyPage = getElement('[data-js="energy-page"]')
-  const journalPage = getElement('[data-js="journal-page"]')
-
-  const pagesMap = {
-    dashboard: dashboardPage,
-    buddies: buddiesPage,
-    teams: teamsPage,
-    energy: energyPage,
-    journal: journalPage,
-  }
-
   const navItems = getAllElements('.navigation__item')
   const pages = getAllElements('[data-js*="page"]')
+
+  const pagesMap = [...pages].map((page) => ({
+    name: pageName(page.dataset.js),
+    page,
+  }))
 
   ;(function initNavigation() {
     navItems.forEach(registerNavigationHandler)
@@ -33,7 +23,7 @@ export default function Navigation() {
 
   function handleNavigation(navItem, pagesMap) {
     setActiveNavLink(navItems, navItem)
-    hideAllPages(pages)
+    pagesMap.forEach((page) => hidePage(page.page))
     showSelectedPage(navItem, pagesMap)
   }
 }
@@ -44,22 +34,18 @@ function hidePage(page, classIdentifier = 'hidden') {
 
 function setActiveNavLink(navItems, clickedNavItem) {
   const activeNavItemClass = 'navigation__item--active'
-  removeClass([...navItems], activeNavItemClass)
+  navItems.forEach((navItem) => removeClass(navItem, activeNavItemClass))
   setClass(clickedNavItem, activeNavItemClass)
 }
 
-function hideAllPages(pages) {
-  pages.forEach((page) => hidePage(page))
-}
-
-function getPageIdentfierFromDataset(dataset) {
+function pageName(dataset) {
   return dataset.split('-')[0]
 }
 
 function showSelectedPage(clickedNavItem, pagesMap) {
-  const pagesIdentifier = getPageIdentfierFromDataset(clickedNavItem.dataset.js)
-  const activePage = pagesMap[pagesIdentifier]
-  if (activePage) {
-    removeClass(activePage, 'hidden')
+  const pagesIdentifier = pageName(clickedNavItem.dataset.js)
+  const activePage = pagesMap.find((page) => page.name === pagesIdentifier)
+  if (activePage.page) {
+    removeClass(activePage.page, 'hidden')
   }
 }
